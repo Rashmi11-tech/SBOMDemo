@@ -121,25 +121,25 @@
         </h2>
       </div>
       <div class="card-body">
-        <form>
+        <form action="/sboms" method="post">
           <div class="row">
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Max Results
                 </label>
-                <input type="text" class="form-control" placeholder="e.g. 10" value="">
+                <input type="text" class="form-control" placeholder="e.g. 10" value="" name="max_results" required>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Organization</label>
-                <select class="form-control"><option>Google</option></select>
+                <select class="form-control" required><option>Google</option></select>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label for="exampleInputEmail1">Repository</label>
-                <select class="form-control"><option>My Repo</option></select>
+                <select class="form-control" required><option>My Repo</option></select>
               </div>
             </div>
           </div>
@@ -147,19 +147,19 @@
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Language</label>
-                <select class="form-control"><option>Java</option></select>
+                <select class="form-control" required><option>Java</option></select>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Package Manager</label>
-                <select class="form-control"><option>Maven</option></select>
+                <select class="form-control" required><option>Maven</option></select>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Commit Email                </label>
-                <input type="text" class="form-control" placeholder="e.g. dev@company.com" value="">
+                <input type="text" class="form-control" placeholder="e.g. dev@company.com" value="" required>
               </div>
             </div>
           </div>
@@ -167,19 +167,19 @@
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Commit Date From (SOON)                </label>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" required>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Component name                </label>
-                <select class="form-control"><option>Log4j</option></select>
+                <select class="form-control" required><option>Log4j</option></select>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Component group                </label>
-                <input type="text" class="form-control" placeholder="com.diz.knots">
+                <input type="text" class="form-control" placeholder="com.diz.knots" required> 
               </div>
             </div>
           </div>
@@ -187,19 +187,19 @@
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Component version                </label>
-                <input type="text" class="form-control" placeholder="e.g. 1.2.0">
+                <input type="text" class="form-control" placeholder="e.g. 1.2.0" required>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>Component purl                </label>
-                <select class="form-control"><option>pkg:npm/foobar@12.3.1</option></select>
+                <select class="form-control" required><option>pkg:npm/foobar@12.3.1</option></select>
               </div>
             </div>
             <div class="col-md-4 pr-1">
               <div class="form-group">
                 <label>CVE               </label>
-                <input type="text" class="form-control" placeholder="e.g. CSV-1337">
+                <input type="text" class="form-control" placeholder="e.g. CSV-1337" required>
               </div>
             </div>
           </div>
@@ -207,18 +207,18 @@
             <div class="col-md-6 pr-1">
               <div class="form-group">
                 <label>Score               </label>
-                <input type="text" class="form-control" placeholder="e.g. 9.1">
+                <input type="text" class="form-control" placeholder="e.g. 9.1" required>
               </div>
             </div>
             <div class="col-md-6 pr-1">
               <div class="form-group">
                 <label>Severity                </label>
-                <select class="form-control"><option>Critical</option></select>
+                <select class="form-control" required><option>Critical</option></select>
               </div>
             </div>
           </div>
           <div class="text-center">
-          <button type="submit" class="btn btn-primary">Search</button>
+          <input type="submit" class="btn btn-primary" value="Search"/>
           </div>
         </form>
       </div>
